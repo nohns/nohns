@@ -4,3 +4,5 @@
 - Interning at Uber, Aarhus in the autumn semester 🍂
 
 ## Configuration .dotfiles
+
+- Visit [this page](CONFIGURE.md) for configuration of a new macOS device 🔧
