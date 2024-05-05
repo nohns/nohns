@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+CACHE_DIR="$HOME/.cache/tmux-sessionizer"
+CACHE_FILE="$CACHE_DIR/recent-tmux-active-sessions.log"
+
+# Make sure cache file exists
+if [ ! -f "$CACHE_FILE" ]; then
+    touch "$CACHE_FILE"
+fi
+
+# Find current tmux sessions if applicable
+CURRENT_SESSION=""
+if ! [[ -z $TMUX ]]; then
+    CURRENT_SESSION=$(tmux display-message -p '#S')
+fi
+    
+SESSION=$((
+    nl "$CACHE_FILE" | sort -nr | cut -f 2- | grep . 
+    tmux ls | cut -d: -f1
+) | awk '!x[$0]++' | grep -vFx "$CURRENT_SESSION" | fzf)
+
+echo $SESSION >> "$CACHE_FILE"
+
+if ! [[ -z $TMUX ]]; then
+	tmux switch -t $SESSION
+	exit 0
+fi
+
+tmux attach -t $SESSION

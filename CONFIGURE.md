@@ -38,5 +38,5 @@ Install relevant tools for Neovim:
 ```
 brew tap universal-ctags/universal-ctags
 brew install --HEAD universal-ctags
-brew install ripgrep fzf
+brew install ripgrep fzf nnn lazygit
 ```
