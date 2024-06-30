@@ -93,6 +93,8 @@ require("lazy").setup({
 		"lewis6991/gitsigns.nvim",
 		config = function()
 			require("gitsigns").setup()
+
+			vim.keymap.set("n", "<leader>b", "<CMD>Gitsigns blame_line<CR>", { desc = "(G)it (B)lame" })
 		end,
 	},
 	{

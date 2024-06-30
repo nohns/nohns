@@ -17,29 +17,28 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Vsplit
+vim.keymap.set("n", "<leader>vs", "<CMD>vsplit<CR>")
+
 -- Global bindings for good LSP support
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<C-q>', vim.diagnostic.goto_prev)
-vim.keymap.set('n', '<C-e>', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<C-q>", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<C-e>", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 --Some great remaps, stolen from primeagen
 vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Script shortcuts
-vim.keymap.set("n", "<leader>s", "<cmd>FloatermNew --height=0.8 --width=0.8 --wintype=float --name=tmux-active-sessionizer ~/.scripts/tmux-active-sessionizer<CR>")
+vim.keymap.set(
+	"n",
+	"<leader>s",
+	"<cmd>FloatermNew --height=0.8 --width=0.8 --wintype=float --name=tmux-active-sessionizer ~/.scripts/tmux-active-sessionizer<CR>"
+)
 
 -- Language snippets
-vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
-vim.keymap.set(
-    "n",
-    "<leader>gg",
-    "<cmd>GoImportRun<CR>"
-)
+vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+vim.keymap.set("n", "<leader>gg", "<cmd>GoImportRun<CR>")

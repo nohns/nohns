@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
 			return
 		end
 
-		vim.cmd("doau BufWritePre")
-		vim.cmd("silent w")
+		--vim.cmd("doau BufWritePre")
+		--vim.cmd("silent w")
 	end,
 })
