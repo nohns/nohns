@@ -1,7 +1,7 @@
 # Welcome to my profile 🚀
 
-- I'm a 24-year-old software engineering student, currently in my fourth semester. 💻
-- Interning at Uber, Aarhus in the autumn semester 🍂
+- I'm a 25-year-old software engineering student, currently in my six semester. 💻
+- Full-time at Uber, Aarhus from start of the Autumn semester 🍂
 
 ## Configuration .dotfiles
 
